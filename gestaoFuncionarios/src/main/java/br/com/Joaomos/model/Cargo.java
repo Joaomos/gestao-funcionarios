@@ -53,16 +53,6 @@ public class Cargo {
 	public void setFuncionarios(List<Funcionario> funcionarios) {
 		this.funcionarios = funcionarios;
 	}
-	
-	
-
-//	public String getDescricao() {
-//		return descricao;
-//	}
-
-//	public void setDescricao(String descrição) {
-//		this.descricao = descrição;
-//	}
 
 //	public int getTipoFuncionario() {
 //		return tipoFuncionario;
