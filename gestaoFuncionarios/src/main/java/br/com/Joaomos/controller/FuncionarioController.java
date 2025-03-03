@@ -1,8 +1,8 @@
-package br.com.Joaomos.service;
+package br.com.Joaomos.controller;
 
 import java.util.Random;
 
-public class FuncionarioService {
+public class FuncionarioController {
 
 	public Long gerarId() {
 		Random random = new Random();

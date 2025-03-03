@@ -11,6 +11,7 @@
      	<class>br.com.Joaomos.model.FuncionarioComissionado</class>
      	<class>br.com.Joaomos.model.FuncionarioHorista</class>
      	<class>br.com.Joaomos.model.Cargo</class>
+     	<class>br.com.Joaomos.model.Usuario</class>
         
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>

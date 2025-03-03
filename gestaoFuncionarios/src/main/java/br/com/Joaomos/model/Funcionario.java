@@ -26,6 +26,7 @@ public class Funcionario {
 	@ManyToOne
 	private Cargo cargo;
 	
+	
 	@Column(name = "cargo")
 	private String nomeCargo;
 	
@@ -83,6 +84,5 @@ public class Funcionario {
 	public void setNomeCargo(String nomeCargo) {
 		this.nomeCargo = nomeCargo;
 	}
-	
 	
 }

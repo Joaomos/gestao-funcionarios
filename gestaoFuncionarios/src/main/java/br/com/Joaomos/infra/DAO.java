@@ -2,7 +2,11 @@ package br.com.Joaomos.infra;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
+
+import br.com.Joaomos.model.Usuario;
 
 public class DAO<E> {
 
@@ -48,6 +52,16 @@ public class DAO<E> {
 	
 	public E obterPorID(Object id) {
 		return em.find(classe, id);
+	}
+	
+	public Usuario buscarPorEmail(String email) {
+		try {
+			TypedQuery<Usuario> query = em.createQuery("SELECT u FROM Usuario u WHERE u.email = :email", Usuario.class);
+			query.setParameter("email", email);
+			return query.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		} 
 	}
 	
 	public void fechar() {
