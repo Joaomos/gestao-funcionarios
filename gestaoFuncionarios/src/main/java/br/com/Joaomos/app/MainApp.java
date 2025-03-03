@@ -16,7 +16,7 @@ public class MainApp extends Application {
 		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/login.fxml");
 		GridPane raiz = FXMLLoader.load(arquivoFXML);
 		
-		Scene cena = new Scene(raiz, 350, 350);
+		Scene cena = new Scene(raiz, 350, 400);
 		cena.getStylesheets().add(arquivoCSS);
 		
 		primaryStage.setResizable(false);
