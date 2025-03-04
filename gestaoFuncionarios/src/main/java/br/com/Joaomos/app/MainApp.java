@@ -23,6 +23,18 @@ public class MainApp extends Application {
 		primaryStage.setTitle("Tela de Login");
 		primaryStage.setScene(cena);
 		primaryStage.show();
+//		
+//		String arquivoCSS = getClass().getResource("/br/com/Joaomos/view/styles.css").toExternalForm();
+//		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/main.fxml");
+//		GridPane raiz = FXMLLoader.load(arquivoFXML);
+//		
+//		Scene cena = new Scene(raiz, 380, 500);
+//		cena.getStylesheets().add(arquivoCSS);
+//		
+//		primaryStage.setResizable(false);
+//		primaryStage.setTitle("Tela de Login");
+//		primaryStage.setScene(cena);
+//		primaryStage.show();
 	}
 	
 	public static void main(String[] args) {
