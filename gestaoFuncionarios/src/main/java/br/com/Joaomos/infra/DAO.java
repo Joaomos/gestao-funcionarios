@@ -6,6 +6,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
+import br.com.Joaomos.model.Cargo;
 import br.com.Joaomos.model.Usuario;
 
 public class DAO<E> {
@@ -58,6 +59,26 @@ public class DAO<E> {
 		try {
 			TypedQuery<Usuario> query = em.createQuery("SELECT u FROM Usuario u WHERE u.email = :email", Usuario.class);
 			query.setParameter("email", email);
+			return query.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		} 
+	}
+	
+	public Cargo buscarPorNome(String nome) {
+		try {
+			TypedQuery<Cargo> query = em.createQuery("SELECT u FROM Cargo u WHERE u.cargo = :cargo", Cargo.class);
+			query.setParameter("cargo", nome);
+			return query.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		} 
+	}
+	
+	public Cargo buscarPorNivelExperiencia(String nivelExperiencia) {
+		try {
+			TypedQuery<Cargo> query = em.createQuery("SELECT u FROM Cargo u WHERE u.nivelExperiencia = :nivelExperiencia", Cargo.class);
+			query.setParameter("nivelExperiencia", nivelExperiencia);
 			return query.getSingleResult();
 		} catch (NoResultException e) {
 			return null;

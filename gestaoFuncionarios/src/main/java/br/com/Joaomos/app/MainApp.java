@@ -16,16 +16,16 @@ public class MainApp extends Application {
 		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/login.fxml");
 		GridPane raiz = FXMLLoader.load(arquivoFXML);
 		
-		Scene cena = new Scene(raiz, 350, 400);
+		Scene cena = new Scene(raiz, 350, 420);
 		cena.getStylesheets().add(arquivoCSS);
 		
 		primaryStage.setResizable(false);
 		primaryStage.setTitle("Tela de Login");
 		primaryStage.setScene(cena);
 		primaryStage.show();
-//		
+		
 //		String arquivoCSS = getClass().getResource("/br/com/Joaomos/view/styles.css").toExternalForm();
-//		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/main.fxml");
+//		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/cadastroCargo.fxml");
 //		GridPane raiz = FXMLLoader.load(arquivoFXML);
 //		
 //		Scene cena = new Scene(raiz, 380, 500);

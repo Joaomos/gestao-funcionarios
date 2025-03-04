@@ -22,6 +22,8 @@ public class Cargo {
 	@Column(nullable = false)
 	private String cargo;
 	
+	private String nivelExperiencia;
+	
 	@OneToMany(mappedBy = "cargo", fetch = FetchType.LAZY)
 	private List<Funcionario> funcionarios;
 	
@@ -31,11 +33,10 @@ public class Cargo {
 
 	}
 
-	public Cargo(String cargo) {
+	public Cargo(String cargo, String nivelExperiencia) {
 		super();
 		this.cargo = cargo;
-	//	this.descricao = descricao;
-	//	this.tipoFuncionario = tipoFuncionario;
+		this.nivelExperiencia = nivelExperiencia;
 	}
 
 	public String getCargo() {
@@ -54,12 +55,13 @@ public class Cargo {
 		this.funcionarios = funcionarios;
 	}
 
-//	public int getTipoFuncionario() {
-//		return tipoFuncionario;
-//	}
+	public String getNivelExperiencia() {
+		return nivelExperiencia;
+	}
 
-//	public void setTipoFuncionario(int tipoFuncionario) {
-//		this.tipoFuncionario = tipoFuncionario;
-//	}
+	public void setNivelExperiencia(String nivelExperiencia) {
+		this.nivelExperiencia = nivelExperiencia;
+	}
+	
 	
 }
