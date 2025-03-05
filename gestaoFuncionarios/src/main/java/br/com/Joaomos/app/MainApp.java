@@ -20,15 +20,15 @@ public class MainApp extends Application {
 		cena.getStylesheets().add(arquivoCSS);
 		
 		primaryStage.setResizable(false);
-		primaryStage.setTitle("Tela de Login");
+		primaryStage.setTitle("Gestão de Funcionários");
 		primaryStage.setScene(cena);
 		primaryStage.show();
 		
 //		String arquivoCSS = getClass().getResource("/br/com/Joaomos/view/styles.css").toExternalForm();
-//		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/cadastroCargo.fxml");
+//		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/cadastroFuncionario.fxml");
 //		GridPane raiz = FXMLLoader.load(arquivoFXML);
 //		
-//		Scene cena = new Scene(raiz, 380, 500);
+//		Scene cena = new Scene(raiz, 420, 750);
 //		cena.getStylesheets().add(arquivoCSS);
 //		
 //		primaryStage.setResizable(false);

@@ -27,8 +27,6 @@ public class Cargo {
 	@OneToMany(mappedBy = "cargo", fetch = FetchType.LAZY)
 	private List<Funcionario> funcionarios;
 	
-	// private int tipoFuncionario; // Se é CLT...
-	
 	public Cargo() {
 
 	}
@@ -63,5 +61,9 @@ public class Cargo {
 		this.nivelExperiencia = nivelExperiencia;
 	}
 	
+	@Override
+	public String toString() {
+		return cargo + " " + nivelExperiencia;
+	}
 	
 }

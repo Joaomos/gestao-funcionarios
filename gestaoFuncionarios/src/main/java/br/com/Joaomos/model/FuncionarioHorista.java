@@ -11,7 +11,7 @@ public class FuncionarioHorista extends Funcionario {
 
 	}
 
-	public FuncionarioHorista(String nome, Cargo cargo, Double salarioBase) {
-		super(nome, cargo, salarioBase);
+	public FuncionarioHorista(String nome, Long CPF, Cargo cargo, Double salarioBase) {
+		super(nome, CPF,cargo, salarioBase);
 	}
 }

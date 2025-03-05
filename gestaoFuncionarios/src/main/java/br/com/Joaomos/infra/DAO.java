@@ -1,5 +1,7 @@
 package br.com.Joaomos.infra;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
@@ -7,6 +9,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 import br.com.Joaomos.model.Cargo;
+import br.com.Joaomos.model.Funcionario;
 import br.com.Joaomos.model.Usuario;
 
 public class DAO<E> {
@@ -19,7 +22,7 @@ public class DAO<E> {
 		try {
 			emf = Persistence.createEntityManagerFactory("gestaoFuncionarios");
 		} catch (Exception e) {
-			// logar log4j
+			
 		}
 	}
 	
@@ -55,6 +58,27 @@ public class DAO<E> {
 		return em.find(classe, id);
 	}
 	
+	public Funcionario buscarPorCPF(Long CPF) {
+		try {
+			TypedQuery<Funcionario> query = em.createQuery("SELECT u FROM Funcionario u WHERE u.CPF = :cpf", Funcionario.class);
+			query.setParameter("cpf", CPF);
+			return query.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		} 
+	}
+	
+	public Funcionario buscarPorId(Long id) {
+		try {
+			TypedQuery<Funcionario> query = em.createQuery("SELECT u FROM Funcionario u WHERE u.id = :id", Funcionario.class);
+			query.setParameter("id", id);
+			return query.getSingleResult();
+		} catch (NoResultException e) {
+			return null;
+		} 
+	}
+
+	
 	public Usuario buscarPorEmail(String email) {
 		try {
 			TypedQuery<Usuario> query = em.createQuery("SELECT u FROM Usuario u WHERE u.email = :email", Usuario.class);
@@ -83,6 +107,10 @@ public class DAO<E> {
 		} catch (NoResultException e) {
 			return null;
 		} 
+	}
+	
+	public List<Cargo> listarTodos() {
+		return em.createQuery("SELECT c FROM Cargo c", Cargo.class).getResultList();
 	}
 	
 	public void fechar() {

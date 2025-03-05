@@ -26,6 +26,9 @@ public class Funcionario {
 	@ManyToOne
 	private Cargo cargo;
 	
+	@Column(name = "CPF")
+	private Long CPF;
+	
 	
 	@Column(name = "cargo")
 	private String nomeCargo;
@@ -37,9 +40,10 @@ public class Funcionario {
 		
 	}
 
-	public Funcionario(String nome, Cargo cargo, Double salarioBase) {
+	public Funcionario(String nome, Long CPF, Cargo cargo, Double salarioBase) {
 		super();
 		this.nome = nome;
+		this.CPF = CPF;
 		this.cargo = cargo;
 		this.salarioBase = salarioBase;
 		this.nomeCargo = cargo.getCargo();
@@ -84,5 +88,15 @@ public class Funcionario {
 	public void setNomeCargo(String nomeCargo) {
 		this.nomeCargo = nomeCargo;
 	}
+
+	public Long getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(Long cPF) {
+		CPF = cPF;
+	}
+	
+	
 	
 }
