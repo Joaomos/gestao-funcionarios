@@ -12,29 +12,29 @@ public class MainApp extends Application {
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+//		String arquivoCSS = getClass().getResource("/br/com/Joaomos/view/styles.css").toExternalForm();
+//		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/login.fxml");
+//		GridPane raiz = FXMLLoader.load(arquivoFXML);
+//		
+//		Scene cena = new Scene(raiz, 350, 420);
+//		cena.getStylesheets().add(arquivoCSS);
+//		
+//		primaryStage.setResizable(false);
+//		primaryStage.setTitle("Gestão de Funcionários");
+//		primaryStage.setScene(cena);
+//		primaryStage.show();
+//		
 		String arquivoCSS = getClass().getResource("/br/com/Joaomos/view/styles.css").toExternalForm();
-		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/login.fxml");
+		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/folhaPagamentos.fxml");
 		GridPane raiz = FXMLLoader.load(arquivoFXML);
 		
-		Scene cena = new Scene(raiz, 350, 420);
+		Scene cena = new Scene(raiz, 950, 500);
 		cena.getStylesheets().add(arquivoCSS);
 		
 		primaryStage.setResizable(false);
 		primaryStage.setTitle("Gestão de Funcionários");
 		primaryStage.setScene(cena);
 		primaryStage.show();
-		
-//		String arquivoCSS = getClass().getResource("/br/com/Joaomos/view/styles.css").toExternalForm();
-//		URL arquivoFXML = getClass().getResource("/br/com/Joaomos/view/cadastroFuncionario.fxml");
-//		GridPane raiz = FXMLLoader.load(arquivoFXML);
-//		
-//		Scene cena = new Scene(raiz, 420, 750);
-//		cena.getStylesheets().add(arquivoCSS);
-//		
-//		primaryStage.setResizable(false);
-//		primaryStage.setTitle("Tela de Login");
-//		primaryStage.setScene(cena);
-//		primaryStage.show();
 	}
 	
 	public static void main(String[] args) {

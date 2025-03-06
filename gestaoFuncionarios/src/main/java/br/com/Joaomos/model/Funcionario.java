@@ -97,6 +97,9 @@ public class Funcionario {
 		CPF = cPF;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return nome + " - Id: " + id;
+	}
 	
 }

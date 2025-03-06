@@ -50,8 +50,17 @@ public class DAO<E> {
 		return this;
 	}
 	
+	public DAO<E> remover(E entidade) {
+		em.remove(entidade);
+		return this;
+	}
+	
 	public DAO<E> incluirAtomico(E entidade) {
 		return this.abrirT().incluir(entidade).fecharT();
+	}
+	
+	public DAO<E> removerAtomico(E entidade) {
+		return this.abrirT().remover(entidade).fecharT();
 	}
 	
 	public E obterPorID(Object id) {
@@ -111,6 +120,10 @@ public class DAO<E> {
 	
 	public List<Cargo> listarTodos() {
 		return em.createQuery("SELECT c FROM Cargo c", Cargo.class).getResultList();
+	}
+	
+	public List<Funcionario> listarTodosFuncionarios() {
+		return em.createQuery("SELECT f FROM Funcionario f", Funcionario.class).getResultList();
 	}
 	
 	public void fechar() {
