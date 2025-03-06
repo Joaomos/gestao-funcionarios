@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.Joaomos.controller.DemissaoController"
+	styleClass="login" hgap="15" vgap="15">
+	
+	<padding>
+		<Insets left="20" right="20" top="5" bottom="40" />
+	</padding>
+	
+	<columnConstraints>
+		<ColumnConstraints minWidth="90" prefWidth="90"
+			halignment="right" />
+		<ColumnConstraints prefWidth="200" maxWidth="Infinity"
+			hgrow="ALWAYS"/>
+	</columnConstraints>
+	
+	<Label text="Demitir Funcionário"
+		styleClass="main-second-titulo"
+		GridPane.columnIndex="0" GridPane.rowIndex="0"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label text="Escolha o funcionário"
+		styleClass="cargo-label"
+		GridPane.columnIndex="0" GridPane.rowIndex="1"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+	<ChoiceBox fx:id="choiceBox"
+		styleClass="campo-cargo"
+    	GridPane.columnIndex="0" GridPane.rowIndex="2"
+    	GridPane.columnSpan="2" GridPane.halignment="LEFT"/>
+	
+	<Label text="Funcionário Id:"
+		styleClass="cargo-label"
+		GridPane.columnIndex="0" GridPane.rowIndex="3"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+	<Label fx:id="idLabel" text=""
+		styleClass="campos-lista"
+		GridPane.columnIndex="0" GridPane.rowIndex="4"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label text="Nome:"
+		styleClass="cargo-label"
+		GridPane.columnIndex="0" GridPane.rowIndex="5"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+	<Label fx:id="nomeLabel" text=""
+		styleClass="campos-lista"
+		GridPane.columnIndex="0" GridPane.rowIndex="6"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+	
+	
+	<Button text="Confirmar demissão" 
+		styleClass="login-form-botao"
+		GridPane.columnIndex="1" GridPane.rowIndex="7"
+		GridPane.columnSpan="1" GridPane.halignment="CENTER"
+		onAction="#demitirFuncionario">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+	<Button text="Voltar" 
+		styleClass="login-form-botao"
+		GridPane.columnIndex="0" GridPane.rowIndex="7"
+		GridPane.columnSpan="1" GridPane.halignment="CENTER"
+		onAction="#abrirMenuPrincipal">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+</GridPane>

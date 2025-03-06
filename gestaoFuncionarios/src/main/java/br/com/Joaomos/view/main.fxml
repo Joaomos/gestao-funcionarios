@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.Joaomos.controller.PrincipalController"
+	styleClass="login" hgap="15" vgap="15">
+	
+	<padding>
+		<Insets left="20" right="20" top="5" bottom="40" />
+	</padding>
+	
+	<columnConstraints>
+		<ColumnConstraints minWidth="90" prefWidth="90"
+			halignment="right" />
+		<ColumnConstraints prefWidth="200" maxWidth="Infinity"
+			hgrow="ALWAYS"/>
+	</columnConstraints>
+	
+	<Label text="Gestão de Funcionários"
+		styleClass="main-second-titulo"
+		GridPane.columnIndex="0" GridPane.rowIndex="0"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="5" bottom="20" />
+		</GridPane.margin>
+	</Label>
+	
+	<Button text="Cadastrar Novo Funcionário" 
+		fx:id="btnCadastrarFuncionario"
+		styleClass="main-page-botao"
+		GridPane.columnIndex="0" GridPane.rowIndex="1"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"
+		onAction="#abrirCadastrarFuncionario"
+		>
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+	<Button text="Cadastrar Novo Cargo" 
+		fx:id="btnCadastrarCargo"
+		styleClass="main-page-botao"
+		GridPane.columnIndex="0" GridPane.rowIndex="2"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"
+		onAction="#abrirCadastrarCargo">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+	<Button text="Lista de Funcionários" 
+		fx:id="btnListaFuncionarios"
+		styleClass="main-page-botao"
+		GridPane.columnIndex="0" GridPane.rowIndex="3"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"
+		onAction="#abrirListaFuncionarios">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+	<Button text="Demitir Funcionário" 
+		fx:id="btnListaFuncionarios"
+		styleClass="main-page-botao"
+		GridPane.columnIndex="0" GridPane.rowIndex="4"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"
+		onAction="#abrirDemissaoFuncionario">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+	<Button text="Folha de Pagamento" 
+		fx:id="btnFolhaSalarial"
+		styleClass="main-page-botao"
+		GridPane.columnIndex="0" GridPane.rowIndex="5"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"
+		onAction="#abrirFolhaPagamento">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+</GridPane>

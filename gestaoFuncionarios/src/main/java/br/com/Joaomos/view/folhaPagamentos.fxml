@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.Joaomos.controller.FolhaPagamentoController"
+	styleClass="login">
+
+	<Label text="Folha de Pagamento"
+		styleClass="main-second-titulo1"
+		GridPane.columnIndex="0" GridPane.rowIndex="0"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label text="Salário Médio"
+		styleClass="main-second-titulo1"
+		GridPane.columnIndex="2" GridPane.rowIndex="0"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label text="Somatório dos Salários"
+		styleClass="main-second-titulo1"
+		GridPane.columnIndex="4" GridPane.rowIndex="0"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label text="Funcionário CLT"
+		styleClass="main-second-titulo11"
+		GridPane.columnIndex="0" GridPane.rowIndex="1"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label text="Funcionário Comissionado"
+		styleClass="main-second-titulo11"
+		GridPane.columnIndex="0" GridPane.rowIndex="2"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label text="Funcionário Horista"
+		styleClass="main-second-titulo11"
+		GridPane.columnIndex="0" GridPane.rowIndex="3"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label text="Total"
+		styleClass="main-second-titulo11"
+		GridPane.columnIndex="0" GridPane.rowIndex="4"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT">
+		
+		<GridPane.margin>
+			<Insets top="0" bottom="0" />
+		</GridPane.margin>
+	</Label>
+	
+	<Label fx:id="FCLTSMLabel" text=""
+		styleClass="campos-folha-pagamento"
+		GridPane.columnIndex="2" GridPane.rowIndex="1"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label fx:id="FCOMSMLabel" text=""
+		styleClass="campos-folha-pagamento"
+		GridPane.columnIndex="2" GridPane.rowIndex="2"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label fx:id="FHORSMLabel" text=""
+		styleClass="campos-folha-pagamento"
+		GridPane.columnIndex="2" GridPane.rowIndex="3"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label fx:id="TotalSMLabel" text=""
+		styleClass="campos-folha-pagamento-total"
+		GridPane.columnIndex="2" GridPane.rowIndex="4"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label fx:id="FCLTSSLabel" text=""
+		styleClass="campos-folha-pagamento"
+		GridPane.columnIndex="4" GridPane.rowIndex="1"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label fx:id="FCOMSSLabel" text=""
+		styleClass="campos-folha-pagamento"
+		GridPane.columnIndex="4" GridPane.rowIndex="2"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label fx:id="FHORSSLabel" text=""
+		styleClass="campos-folha-pagamento"
+		GridPane.columnIndex="4" GridPane.rowIndex="3"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+		
+	<Label fx:id="TotalSSLabel" text=""
+		styleClass="campos-folha-pagamento-total"
+		GridPane.columnIndex="4" GridPane.rowIndex="4"
+		GridPane.columnSpan="2" GridPane.halignment="LEFT"></Label>
+	
+	<Button text="Voltar" 
+		styleClass="login-form-botao"
+		GridPane.columnIndex="0" GridPane.rowIndex="5"
+		GridPane.columnSpan="8" GridPane.halignment="CENTER"
+		onAction="#abrirMenuPrincipal">
+		
+		<GridPane.margin>
+			<Insets top="40" bottom="0" />
+		</GridPane.margin>
+		
+	</Button>
+	
+</GridPane>

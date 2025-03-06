@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="br.com.Joaomos.controller.CadastroUsuarioController"
+	styleClass="login" hgap="15" vgap="15">
+	
+	<padding>
+		<Insets left="40" right="40" top="40" bottom="40" />
+	</padding>
+	
+	<columnConstraints>
+		<ColumnConstraints minWidth="90" prefWidth="90"
+			halignment="right" />
+		<ColumnConstraints prefWidth="200" maxWidth="Infinity"
+			hgrow="ALWAYS"/>
+	</columnConstraints>
+
+	<Label text="Seja Bem Vindo"
+		styleClass="login-titulo"
+		GridPane.columnIndex="0" GridPane.rowIndex="0"
+		GridPane.columnSpan="2" GridPane.halignment="CENTER">
+		
+		<GridPane.margin>
+			<Insets top="20" bottom="20" />
+		</GridPane.margin>
+	</Label>
+		
+	<Label text="Nome:"
+		styleClass="login-form-label"
+		GridPane.columnIndex="0" GridPane.rowIndex="1"></Label>
+	<TextField fx:id="campoNome"
+		styleClass="campo-email"
+		GridPane.columnIndex="1" GridPane.rowIndex="1">
+	
+	</TextField>
+	
+	<Label text="E-mail:"
+		styleClass="login-form-label"
+		GridPane.columnIndex="0" GridPane.rowIndex="2"></Label>
+	<TextField fx:id="campoEmail"
+		styleClass="campo-email"
+		GridPane.columnIndex="1" GridPane.rowIndex="2">
+	
+	</TextField>
+		
+	<Label text="Senha:"
+		styleClass="login-form-label"
+		GridPane.columnIndex="0" GridPane.rowIndex="3"></Label>
+	<PasswordField fx:id="campoSenha"
+		styleClass="campo-email"
+		GridPane.columnIndex="1" GridPane.rowIndex="3">
+	
+	</PasswordField>
+	
+	<Button text="Resgistrar-se" 
+		styleClass="login-form-botao"
+		GridPane.columnIndex="1" GridPane.rowIndex="4"
+		GridPane.columnSpan="2" 
+		onAction="#registrarUsuario">
+		
+		<GridPane.margin>
+			<Insets top="20" bottom="20" />
+		</GridPane.margin>
+		
+	</Button>
+	
+</GridPane>
