@@ -10,6 +10,9 @@ import javax.persistence.TypedQuery;
 
 import br.com.Joaomos.model.Cargo;
 import br.com.Joaomos.model.Funcionario;
+import br.com.Joaomos.model.FuncionarioCLT;
+import br.com.Joaomos.model.FuncionarioComissionado;
+import br.com.Joaomos.model.FuncionarioHorista;
 import br.com.Joaomos.model.Usuario;
 
 public class DAO<E> {
@@ -124,6 +127,25 @@ public class DAO<E> {
 	
 	public List<Funcionario> listarTodosFuncionarios() {
 		return em.createQuery("SELECT f FROM Funcionario f", Funcionario.class).getResultList();
+	}
+	
+
+	public List<Funcionario> listarFuncionariosCLT() {
+	    return em.createQuery("SELECT f FROM Funcionario f WHERE TYPE(f) = :tipo", Funcionario.class)
+	             .setParameter("tipo", FuncionarioCLT.class)
+	             .getResultList();
+	}
+	
+	public List<Funcionario> listarFuncionariosCOM() {
+		return em.createQuery("SELECT f FROM Funcionario f WHERE TYPE(f) = :tipo", Funcionario.class)
+	             .setParameter("tipo", FuncionarioComissionado.class)
+	             .getResultList();
+	}
+	
+	public List<Funcionario> listarFuncionariosHOR() {
+		return em.createQuery("SELECT f FROM Funcionario f WHERE TYPE(f) = :tipo", Funcionario.class)
+	             .setParameter("tipo", FuncionarioHorista.class)
+	             .getResultList();
 	}
 	
 	public void fechar() {

@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @DiscriminatorColumn(name = "tipo", length = 4, discriminatorType = DiscriminatorType.STRING)
 @DiscriminatorValue("FNOR")
 public class Funcionario {
-
+	
 	@Id
 	private Long id;
 	
@@ -35,7 +35,7 @@ public class Funcionario {
 	
 	@Column(nullable = false)
 	private Double salarioBase;
-	
+
 	public Funcionario() {
 		
 	}
@@ -101,5 +101,10 @@ public class Funcionario {
 	public String toString() {
 		return nome + " - Id: " + id;
 	}
+
+	public String getTipo() {
+        return this.getClass().getAnnotation(DiscriminatorValue.class).value();
+    }
+	
 	
 }
