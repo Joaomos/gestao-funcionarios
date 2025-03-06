@@ -24,7 +24,6 @@ public class MainApp extends Application {
 		primaryStage.setTitle("Gestão de Funcionários");
 		primaryStage.setScene(cena);
 		primaryStage.show();
-
 	}
 	
 	public static void main(String[] args) {

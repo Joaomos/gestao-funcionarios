@@ -14,6 +14,4 @@ public class FuncionarioCLT extends Funcionario {
 	public FuncionarioCLT(String nome, Long CPF, Cargo cargo, Double salarioBase) {
 		super(nome, CPF,cargo, salarioBase);
 	}
-	
-	
 }

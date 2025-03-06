@@ -89,7 +89,6 @@ public class DAO<E> {
 			return null;
 		} 
 	}
-
 	
 	public Usuario buscarPorEmail(String email) {
 		try {
@@ -129,7 +128,6 @@ public class DAO<E> {
 		return em.createQuery("SELECT f FROM Funcionario f", Funcionario.class).getResultList();
 	}
 	
-
 	public List<Funcionario> listarFuncionariosCLT() {
 	    return em.createQuery("SELECT f FROM Funcionario f WHERE TYPE(f) = :tipo", Funcionario.class)
 	             .setParameter("tipo", FuncionarioCLT.class)

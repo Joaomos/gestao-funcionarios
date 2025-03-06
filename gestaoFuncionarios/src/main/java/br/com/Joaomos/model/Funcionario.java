@@ -104,7 +104,5 @@ public class Funcionario {
 
 	public String getTipo() {
         return this.getClass().getAnnotation(DiscriminatorValue.class).value();
-    }
-	
-	
+    }	
 }
