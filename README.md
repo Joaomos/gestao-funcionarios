@@ -1,6 +1,6 @@
 # Gestão de Funcionários 🚀
 
-Este é um sistema para gerenciamento de funcionários que facilita o controle e a administração dos dados dos colaboradores de uma empresa. O sistema permite realizar operações de cadastro, listagem, atualização e remoção de registros, além de gerar relatórios que auxiliam na análise dos dados. 📊
+Este é um sistema para gerenciamento de funcionários que facilita o controle e a administração dos dados dos colaboradores de uma empresa. O sistema permite realizar operações de cadastro, listagem e remoção de registros, além de gerar relatórios que auxiliam na análise dos dados. 📊
 
 ---
 
