@@ -93,8 +93,6 @@ public class ListagemController {
 		salarioLabel.setText(" R$" + String.valueOf(funcionario.getSalarioBase()));
 		cpfLabel.setText(" " + String.valueOf(funcionario.getCPF()));
 		
-		System.out.println(funcionario.getTipo());
-		
 		if(funcionario.getTipo().equals("FCLT")) {
 			contratacaoLabel.setText(" Funcionário CLT");
 		} else if(funcionario.getTipo().equals("FCOM")) {
